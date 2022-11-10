@@ -1,0 +1,171 @@
+\documentclass[11pt]{exam}
+\usepackage{minted}
+
+\usepackage[utf8]{inputenc}
+\setlength{\headheight}{14.5pt}
+\usepackage{geometry} 
+\geometry{a4paper} 
+\geometry{margin=2.2cm}
+
+\usepackage{graphicx}
+\usepackage[parfill]{parskip}
+%\graphicspath{ {./images/} }
+
+\usepackage{booktabs} 
+\usepackage{array} 
+\usepackage{paralist} 
+\usepackage{verbatim} 
+\usepackage{subfig} 
+\usepackage{setspace}
+\usepackage{amsmath, amssymb, amsthm, bm, bbm, enumitem, multicol,colortbl}
+\setlist{nosep}
+\usepackage{xfrac}
+\usepackage{boldline} 
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{lastpage}
+\usepackage{sectsty}
+\usepackage{xcolor}
+\definecolor{LightGray}{gray}{0.95}
+
+\chead{}
+\cfoot{\thepage}
+\qformat{\textbf{Problem \thequestion \;[\thepoints]\, \thequestiontitle}\hfill}
+\renewcommand{\questionshook}{%
+\setlength{\leftmargin}{0pt}%
+\setlength{\labelwidth}{-\labelsep}%
+}
+
+\begin{document}
+
+\begin{center}
+\rule{\textwidth}{2.5pt}
+
+\textbf{\Large{Not COMP 2211 Final Exam - Spring 2022 - HKUST}}
+\vspace{-0.2cm}
+\rule{\textwidth}{2.5pt}
+
+\vspace{0.3cm}
+\renewcommand{\arraystretch}{1.2}
+\sffamily
+\begin{tabular}{lp{14.5cm}}
+    Date: & May 27, 2022 (Friday) \\
+    Time Allowed: & 2.5 hours, 12:30 pm onwards \\
+    Instructions: & \begin{enumerate}[leftmargin=*,]
+        \item This is a closed-book, closed-notes examination.
+        \item There are \textbf{\underline{\rmfamily 8}} questions on \textbf{\rmfamily \pageref{LastPage}} pages (including this cover page and 30 blank \newline pages at the end).
+        \item Write your answers in the space provided.
+        \item All programming codes in your answers must be written in the Python version \newline as taught in the class.
+        \item For programming questions, unless otherwise stated, you are \textbf{\underline{\rmfamily NOT}} allowed \newline to define additional classes, helper functions and use global variables, nor any \newline library functions not mentioned in the questions.
+    \end{enumerate}\\
+\end{tabular}
+\rmfamily
+
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|l|p{9cm}|}
+    \hline
+    Student Name & \\
+    \hline
+    Student ID & \\
+    \hline
+    Email Address & \\
+    \hline
+\end{tabular}
+
+\vspace{0.5cm}
+
+\rule{\textwidth}{1pt}
+\vspace{0.5cm}
+
+\begin{tabular}{c|c|c|>{\centering\arraybackslash}p{2.7cm}|}
+    \cline{2-4}
+    \multirow{10}{*}{\begin{tabular}[c]{@{}c@{}}For T.A.\\ Use Only\end{tabular}} & \textbf{Problem} & \textbf{Topic} & \textbf{Score} \\ \cline{2-4} 
+     & 1 & True/False Questions & \hfill/ 10 \\ \cline{2-4} 
+     & 2 & K-Means Clustering & \hfill/ 8 \\ \cline{2-4} 
+     & 3 & Digital Image Processing Fundamentals & \hfill/ 11 \\ \cline{2-4} 
+     & 4 & Minimax and Alpha-Beta Pruning& \hfill/ 21 \\ \cline{2-4} 
+     & 5 & Ethics of Artificial Intelligence  & \hfill/ 6 \\ \cline{2-4} 
+     & 6 & Multilayer Perceptron & \hfill/ 8 \\ \cline{2-4} 
+     & 7 & Image Convolution & \hfill/ 11 \\ \cline{2-4} 
+     & 8 & Convolutional Neural Network & \hfill/ 25 \\ \cline{2-4} 
+     &  & Total & \hfill/ 100 \\ \cline{2-4} 
+\end{tabular}
+
+\renewcommand{\arraystretch}{1}
+
+\end{center}
+\newpage
+\begin{questions}
+\titledquestion{True/False Questions}[100]
+\ \\[10pt]
+Indicate whether the following statements are true or false by \underline{putting \textbf{T} or \textbf{F}} in the given table. You get $\dfrac{100}{9}$ points for each correct answer.
+
+\begin{parts}
+    \part I enjoy the Lectures, Labs and PAs in COMP2211.
+    \part I enjoy the Exams in COMP2211.
+    \part I aim for a good grade in COMP2211.
+    \part I appreciate all the efforts that the teaching team have spent on COMP2211.
+    \part I will write a good review to COMP2211 in ustspace and recommend the course to my friends.
+    \part The following program will print the words from the bottom of my heart.
+    \begin{minted}[bgcolor=LightGray]{python}
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn, pandas, math, datetime 
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense, Flatten 
+from keras import regularizers 
+from tensorflow.keras.optimizers import Adam 
+from keras.metrics import sparse_categorical_crossentropy
+from keras.callbacks import TensorBoard 
+from keras.models import load_model 
+from tensorflow.keras.utils import plot_model
+from tensorflow.math import confusion_matrix 
+from tensorflow.keras import activations
+print("Desmond is the best guy nah!")
+    \end{minted}
+    \part I understand that ``Not COMP2211 Final Exam'' is fake and is not associated with the real final exam at all.
+    \part Having said that, I will still work hard for the real final exam, and get a score better than the score that I obtained in ``Not COMP2211 Final Exam''.
+    \part I will strictly follow the HKUST Academic Honor Code.
+\end{parts}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Question} & \textbf{Answer (T/F)} \\ \hline
+(a) &  \\ \hline
+(b) &  \\ \hline
+(c) &  \\ \hline
+(d) &  \\ \hline
+(e) &  \\ \hline
+(f) &  \\ \hline
+(g) &  \\ \hline
+(h) &  \\ \hline
+(i) &  \\ \hline
+\end{tabular}
+\end{center}
+\end{questions}
+\ \\[10pt]
+\begin{center}
+    \texttt{--- END OF PAPER ---}
+\end{center}
+
+\newpage
+
+\begin{center}
+    /* Rough Work */
+\end{center}
+\newpage
+
+\begin{center}
+    /* Rough Work */
+\end{center}
+\newpage
+
+\begin{center}
+    /* Rough Work */
+\end{center}
+\newpage
+
+
+
+\end{document}
